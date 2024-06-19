@@ -1,0 +1,21 @@
+config_version=5
+
+[application]
+
+config/name="Camera Transition (dump)"
+config/tags=PackedStringArray("components", "dump")
+run/main_scene="res://Cenas/world.tscn"
+config/features=PackedStringArray("4.1", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[layer_names]
+
+2d_physics/layer_1="Mapa"
+2d_physics/layer_2="Jogador"
+2d_physics/layer_3="Camera"
+2d_physics/layer_4="NPC"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

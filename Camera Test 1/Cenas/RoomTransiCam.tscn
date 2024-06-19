@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhnt7wihrcdxo"]
+
+[ext_resource type="Script" path="res://Scripts/RoomTransiCam.gd" id="1_k4c8x"]
+
+[node name="RoomTransiCam" type="Camera2D"]
+script = ExtResource("1_k4c8x")
+
+[node name="TransiCima" type="Area2D" parent="."]
+position = Vector2(-575, -334)
+collision_layer = 4
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TransiCima"]
+position = Vector2(0, 4.32197)
+scale = Vector2(1, 0.94697)
+polygon = PackedVector2Array(0, -2.452, 11, 11.276, 11, 11.276, 1141, 10.22, 1152, -2.452, 1141, 10.22, 1152, -2.452)
+
+[node name="TransiBaixo" type="Area2D" parent="."]
+position = Vector2(-299, 333)
+collision_layer = 4
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TransiBaixo"]
+position = Vector2(878, -12)
+rotation = 3.14159
+scale = Vector2(1, 0.94697)
+polygon = PackedVector2Array(-1, 0, 8, 9.50403, 8, 9.50403, 1140, 12.675, 1151, -0.00012207)
+metadata/_edit_lock_ = true
+
+[node name="TransiDire" type="Area2D" parent="."]
+position = Vector2(-574, -327)
+collision_layer = 4
+collision_mask = 4
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TransiDire"]
+rotation = 6.28319
+polygon = PackedVector2Array(1141, 12.0029, 1152, 0, 1152, 648, 1143, 639.003, 1140, 326.003)
+metadata/_edit_lock_ = true
+
+[node name="TransiEsqu" type="Area2D" parent="."]
+position = Vector2(-575, -326)
+collision_layer = 4
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TransiEsqu"]
+position = Vector2(1152, 648)
+rotation = 3.14159
+polygon = PackedVector2Array(1141, 12.0029, 1152, 0, 1152, 49.5029, 1152, 648, 1141, 635.003, 1140, 326.003)
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="TransiCima" to="." method="_OnBodyEnteredCima"]
+[connection signal="body_entered" from="TransiBaixo" to="." method="_OnBodyEnteredBaixo"]
+[connection signal="body_entered" from="TransiDire" to="." method="_OnBodyEnteredDire"]
+[connection signal="body_entered" from="TransiEsqu" to="." method="_OnBodyEnteredEsqu"]
