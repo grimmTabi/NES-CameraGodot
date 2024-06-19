@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfcqknj5j25y2"]
+
+[ext_resource type="Texture2D" uid="uid://dm3bayv5dqvk" path="res://Tela/128 x 72.png" id="1_0ha0t"]
+
+[node name="SalaBase" type="Node2D"]
+
+[node name="128X72" type="Sprite2D" parent="."]
+position = Vector2(577.5, 327)
+scale = Vector2(9.02344, 10.5484)
+texture = ExtResource("1_0ha0t")
